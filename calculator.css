@@ -1,0 +1,76 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+body {
+  background: linear-gradient(hsl(63, 45%, 74%) 70%, hsl(123, 44%, 75%));
+  color: #444066;
+  font-family: 'Dosis-ExtraBold', 'Dosis';
+  font-weight: 800;
+}
+
+.container {
+  display: grid;
+  grid-template:
+    auto auto 3fr /
+    1fr auto 1fr;
+  height: 100vh;
+  width: 100vw;
+}
+
+.heading {
+  background: hsl(209, 53%, 55%);
+  border-bottom: 3px solid hsl(210, 53%, 66%);
+  border-top: 3px solid hsl(220, 70%, 80%);
+  box-shadow: 0 0.15em hsl(246, 23%, 33%);
+  color: hsl(73, 56%, 80%);
+  font-size: 6vmin;
+  grid-column: span 3;
+  grid-row: 1;
+  margin-bottom: 8vmin;
+  padding: 0.5em;
+  text-align: center;
+  text-shadow: -3px 3px hsl(246, 23%, 33%);
+}
+
+.calculator {
+  grid-column: 2;
+  grid-row: 2;
+  max-height: 65vh;
+  width: 80vmin;
+}
+
+.btn-top {
+  cursor: pointer;
+}
+
+.btn-shadow {
+  fill: hsl(246, 23%, 33%);
+}
+
+.btn-highlight {
+  fill: white;
+}
+
+.btn-fill {
+  fill: hsl(73, 54%, 78%);
+  transition: fill 0.2s;
+}
+
+.btn-text {
+  fill: hsl(247, 23%, 29%);
+  font-size: 125px;
+}
+
+#screen-text {
+  fill: #3e5757;
+  font-size: 150px;
+}
