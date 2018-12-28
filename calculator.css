@@ -74,10 +74,6 @@ body {
   pointer-events: none;
 }
 
-.active-btn {
-  fill: blue;
-}
-
 #screen-text {
   fill: #3e5757;
   font-size: 150px;

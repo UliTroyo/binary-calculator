@@ -2,6 +2,13 @@
 
 // Objects //
 
+const BtnFill = Object.freeze({
+  active: 'hsl(193, 54%, 78%)', // blue
+  activeHover: 'hsl(193, 54%, 92%)', // light blue
+  normal: 'hsl(73, 54%, 78%)', // green-yellow
+  normalHover: 'hsl(73, 54%, 92%)' // light green-yellow
+});
+
 const Calculator = Object.seal({
   operand: '',
   pendingOp: '',
@@ -9,6 +16,10 @@ const Calculator = Object.seal({
   state: 'idle',
   changeStateTo(newState) {
     this.state = newState;
+  },
+  clearOpButton() {
+    this.removeActive();
+    this.pendingOp = '';
   },
   clearOperations() {
     this.setOpButton('');
@@ -27,17 +38,11 @@ const Calculator = Object.seal({
     `);
   },
   removeActive() {
-    document
-      .getElementById(this.pendingOp)
-      .querySelector('.btn-fill')
-      .classList.remove('active-btn');
+    Buttons[this.pendingOp].fill.style.fill = BtnFill.normal;
   },
   assignActive(btn) {
     this.pendingOp = btn;
-    document
-      .getElementById(this.pendingOp)
-      .querySelector('.btn-fill')
-      .classList.add('active-btn');
+    Buttons[btn].fill.style.fill = BtnFill.active;
   },
   setOpButton(btn) {
     if (this.pendingOp === '') {
@@ -102,7 +107,7 @@ const Calculator = Object.seal({
             break;
           case 'one':
           case 'zero':
-            Calculator.updatePhrase(Buttons[btn]);
+            Calculator.updatePhrase(Buttons[btn].key);
             Calculator.changeStateTo('number');
             break;
           default:
@@ -128,7 +133,7 @@ const Calculator = Object.seal({
             break;
           case 'one':
           case 'zero':
-            Calculator.updatePhrase(Buttons[btn]);
+            Calculator.updatePhrase(Buttons[btn].key);
             Calculator.logState();
             break;
           default:
@@ -170,7 +175,7 @@ const Calculator = Object.seal({
             Calculator.updateScreen();
             Calculator.changeStateTo('idle');
             Calculator.operand = Calculator.phrase;
-            Calculator.setOpButton('');
+            Calculator.clearOpButton();
             Calculator.phrase = '0';
             Calculator.logState();
             break;
@@ -182,7 +187,7 @@ const Calculator = Object.seal({
             break;
           case 'one':
           case 'zero':
-            Calculator.updatePhrase(Buttons[btn]);
+            Calculator.updatePhrase(Buttons[btn].key);
             Calculator.logState();
             break;
           default:
@@ -204,8 +209,9 @@ const Buttons = {
   zero: '0'
 };
 
+// Button Generator //
+
 function Button(btn) {
-  this.id = btn;
   this.key = Buttons[btn];
   this.group = document.getElementById(btn);
   this.fill = this.group.querySelector('path.btn-fill');
@@ -224,7 +230,7 @@ function generateButtons() {
   Object.freeze(Buttons);
 }
 
-// Functions //
+// Helper Functions //
 
 function pathDown(svgPath) {
   svgPath.style.transform = 'translate(-8px, 8px)';
@@ -241,19 +247,7 @@ function buttonDownAnim(btn) {
   pathDown(Buttons[btn].fill);
   pathDown(Buttons[btn].highlight);
   textDown(Buttons[btn].text);
-  // for (let c of collection) {
-  //   if (c.classList.contains('btn-top')) {
-  //     let x, y;
-  //     if (c.tagName == 'path') {
-  //       c.style.transform = 'translate(-8px, 8px)';
-  //     } else {
-  //       x = Number(c.getAttribute('x')) - 8;
-  //       y = Number(c.getAttribute('y')) + 8;
-  //       c.setAttribute('x', x);
-  //       c.setAttribute('y', y);
-  //     }
-  //   }
-  // }
+  Buttons[btn].fill.style.fill = 'white';
 }
 
 function pathUp(svgPath) {
@@ -271,24 +265,16 @@ function buttonUpAnim(btn) {
   pathUp(Buttons[btn].fill);
   pathUp(Buttons[btn].highlight);
   textUp(Buttons[btn].text);
-  // for (let c of collection) {
-  //   if (c.classList.contains('btn-top')) {
-  //     let x, y;
-  //     if (c.tagName == 'path') {
-  //       c.style.transform = 'translate(0, 0)';
-  //     } else {
-  //       x = Number(c.getAttribute('x')) + 8;
-  //       y = Number(c.getAttribute('y')) - 8;
-  //       c.setAttribute('x', x);
-  //       c.setAttribute('y', y);
-  //     }
-  //   }
-  // }
+  Calculator.pendingOp === btn
+    ? (Buttons[btn].fill.style.fill = BtnFill.active)
+    : (Buttons[btn].fill.style.fill = BtnFill.normal);
 }
 
 function getButton(target) {
   return target.closest('g').id;
 }
+
+// Listener Functions //
 
 function onButtonPress(e) {
   const btn = getButton(e.target);
@@ -313,20 +299,20 @@ function onKeyPress(e) {
 function onMouseOut(e) {
   const btn = getButton(e.target);
   const op = Calculator.pendingOp;
-  if (op !== '' && op === t.closest('g').id) {
-    t.closest('path.btn-top').style.fill = 'blue'; //blue
+  if (op !== '' && op === btn) {
+    Buttons[btn].fill.style.fill = BtnFill.active;
   } else {
-    t.closest('path.btn-top').style.fill = 'hsl(73, 54%, 78%)'; //green-yellow
+    Buttons[btn].fill.style.fill = BtnFill.normal;
   }
 }
 
 function onMouseOver(e) {
-  const t = e.target;
+  const btn = getButton(e.target);
   const op = Calculator.pendingOp;
-  if (op !== '' && op === t.closest('g').id) {
-    t.closest('path.btn-top').style.fill = 'lightblue'; // blue whitish
+  if (op !== '' && op === btn) {
+    Buttons[btn].fill.style.fill = BtnFill.activeHover;
   } else {
-    t.closest('path.btn-top').style.fill = 'hsl(73, 54%, 92%)'; //whitish
+    Buttons[btn].fill.style.fill = BtnFill.normalHover;
   }
 }
 
