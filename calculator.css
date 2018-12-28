@@ -54,23 +54,32 @@ body {
 
 .btn-shadow {
   fill: hsl(246, 23%, 33%);
+  pointer-events: none;
 }
 
 .btn-highlight {
   fill: white;
+  pointer-events: none;
 }
 
 .btn-fill {
   fill: hsl(73, 54%, 78%);
-  transition: fill 0.2s;
+  transition: fill 0.15s;
+  transition-timing-function: ease-out;
 }
 
 .btn-text {
   fill: hsl(247, 23%, 29%);
   font-size: 125px;
+  pointer-events: none;
+}
+
+.active-btn {
+  fill: blue;
 }
 
 #screen-text {
   fill: #3e5757;
   font-size: 150px;
+  white-space: pre;
 }
