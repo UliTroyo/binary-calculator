@@ -193,7 +193,7 @@ const Calculator = Object.seal({
   }
 });
 
-const Buttons = Object.freeze({
+const Buttons = {
   clear: 'c',
   divide: '/',
   equals: '=',
@@ -202,22 +202,23 @@ const Buttons = Object.freeze({
   one: '1',
   plus: '+',
   zero: '0'
-});
+};
 
 function Button(btn) {
   this.id = btn;
   this.key = Buttons[btn];
   this.group = document.getElementById(btn);
-  this.fill = group.querySelector('path.btn-fill');
-  this.highlight = group.querySelector('path.btn-highlight');
-  this.shadow = group.querySelector('path.btn-shadow');
-  this.text = group.querySelector('text.btn-text');
+  this.fill = this.group.querySelector('path.btn-fill');
+  this.highlight = this.group.querySelector('path.btn-highlight');
+  this.shadow = this.group.querySelector('path.btn-shadow');
+  this.text = this.group.querySelector('text.btn-text');
 }
 
 function generateButtons() {
   for (let b in Buttons) {
-    a;
+    Buttons[b] = new Button(b);
   }
+  Object.freeze(Buttons);
 }
 
 // Functions //
