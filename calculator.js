@@ -215,69 +215,103 @@ function Button(btn) {
 }
 
 function generateButtons() {
+  let keys = {};
   for (let b in Buttons) {
+    keys[Buttons[b]] = b;
     Buttons[b] = new Button(b);
   }
+  Buttons.keys = keys;
   Object.freeze(Buttons);
 }
 
 // Functions //
 
-function buttonDownAnim(collection) {
-  for (let c of collection) {
-    if (c.classList.contains('btn-top')) {
-      let x, y;
-      if (c.tagName == 'path') {
-        c.style.transform = 'translate(-8px, 8px)';
-      } else {
-        x = Number(c.getAttribute('x')) - 8;
-        y = Number(c.getAttribute('y')) + 8;
-        c.setAttribute('x', x);
-        c.setAttribute('y', y);
-      }
-    }
-  }
+function pathDown(svgPath) {
+  svgPath.style.transform = 'translate(-8px, 8px)';
 }
 
-function buttonUpAnim(collection) {
-  for (let c of collection) {
-    if (c.classList.contains('btn-top')) {
-      let x, y;
-      if (c.tagName == 'path') {
-        c.style.transform = 'translate(0, 0)';
-      } else {
-        x = Number(c.getAttribute('x')) + 8;
-        y = Number(c.getAttribute('y')) - 8;
-        c.setAttribute('x', x);
-        c.setAttribute('y', y);
-      }
-    }
-  }
+function textDown(svgText) {
+  let x = Number(svgText.getAttribute('x')) - 8;
+  let y = Number(svgText.getAttribute('y')) + 8;
+  svgText.setAttribute('x', x);
+  svgText.setAttribute('y', y);
+}
+
+function buttonDownAnim(btn) {
+  pathDown(Buttons[btn].fill);
+  pathDown(Buttons[btn].highlight);
+  textDown(Buttons[btn].text);
+  // for (let c of collection) {
+  //   if (c.classList.contains('btn-top')) {
+  //     let x, y;
+  //     if (c.tagName == 'path') {
+  //       c.style.transform = 'translate(-8px, 8px)';
+  //     } else {
+  //       x = Number(c.getAttribute('x')) - 8;
+  //       y = Number(c.getAttribute('y')) + 8;
+  //       c.setAttribute('x', x);
+  //       c.setAttribute('y', y);
+  //     }
+  //   }
+  // }
+}
+
+function pathUp(svgPath) {
+  svgPath.style.transform = 'translate(0, 0)';
+}
+
+function textUp(svgText) {
+  let x = Number(svgText.getAttribute('x')) + 8;
+  let y = Number(svgText.getAttribute('y')) - 8;
+  svgText.setAttribute('x', x);
+  svgText.setAttribute('y', y);
+}
+
+function buttonUpAnim(btn) {
+  pathUp(Buttons[btn].fill);
+  pathUp(Buttons[btn].highlight);
+  textUp(Buttons[btn].text);
+  // for (let c of collection) {
+  //   if (c.classList.contains('btn-top')) {
+  //     let x, y;
+  //     if (c.tagName == 'path') {
+  //       c.style.transform = 'translate(0, 0)';
+  //     } else {
+  //       x = Number(c.getAttribute('x')) + 8;
+  //       y = Number(c.getAttribute('y')) - 8;
+  //       c.setAttribute('x', x);
+  //       c.setAttribute('y', y);
+  //     }
+  //   }
+  // }
+}
+
+function getButton(target) {
+  return target.closest('g').id;
 }
 
 function onButtonPress(e) {
-  Calculator.handleClick(e.target.closest('g').id);
-  const collection = e.target.closest('g').children;
-  buttonDownAnim(collection);
+  const btn = getButton(e.target);
+  Calculator.handleClick(btn);
+  buttonDownAnim(btn);
   setTimeout(() => {
-    buttonUpAnim(collection);
+    buttonUpAnim(btn);
   }, 200);
 }
 
 function onKeyPress(e) {
-  if (Object.values(Buttons).includes(e.key)) {
-    const key = Object.keys(Buttons).find(k => Buttons[k] === e.key);
-    Calculator.handleClick(key);
-    const btnTop = document.getElementById(key).children;
-    buttonDownAnim(collection);
+  if (e.key in Buttons.keys) {
+    const btn = Buttons.keys[e.key];
+    Calculator.handleClick(btn);
+    buttonDownAnim(btn);
     setTimeout(() => {
-      buttonUpAnim(collection);
+      buttonUpAnim(btn);
     }, 200);
   }
 }
 
 function onMouseOut(e) {
-  const t = e.target;
+  const btn = getButton(e.target);
   const op = Calculator.pendingOp;
   if (op !== '' && op === t.closest('g').id) {
     t.closest('path.btn-top').style.fill = 'blue'; //blue
