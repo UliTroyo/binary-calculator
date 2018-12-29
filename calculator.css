@@ -11,7 +11,7 @@ body {
 }
 
 body {
-  background: linear-gradient(hsl(63, 45%, 74%) 70%, hsl(123, 44%, 75%));
+  background: linear-gradient(hsl(60, 96%, 82%), hsl(123, 44%, 75%));
   color: #444066;
   font-family: 'Dosis-ExtraBold', 'Dosis';
   font-weight: 800;
@@ -27,18 +27,18 @@ body {
 }
 
 .heading {
-  background: hsl(209, 53%, 55%);
+  background: hsl(209, 53%, 62%);
   border-bottom: 3px solid hsl(210, 53%, 66%);
   border-top: 3px solid hsl(220, 70%, 80%);
   box-shadow: 0 0.15em hsl(246, 23%, 33%);
-  color: hsl(73, 56%, 80%);
-  font-size: 6vmin;
+  color: hsl(60, 96%, 82%);
+  font-size: 8vmin;
   grid-column: span 3;
   grid-row: 1;
   margin-bottom: 8vmin;
-  padding: 0.5em;
+  padding: 0.3em;
   text-align: center;
-  text-shadow: -3px 3px hsl(246, 23%, 33%);
+  text-shadow: -2px 2px hsl(246, 23%, 33%);
 }
 
 .calculator {
@@ -63,13 +63,13 @@ body {
 }
 
 .btn-fill {
-  fill: hsl(73, 54%, 78%);
+  fill: hsl(60, 70%, 78%);
   transition: fill 0.15s;
   transition-timing-function: ease-out;
 }
 
 .btn-text {
-  fill: hsl(247, 23%, 29%);
+  fill: hsl(247, 13%, 25%);
   font-size: 125px;
   pointer-events: none;
 }

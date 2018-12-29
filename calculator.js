@@ -3,10 +3,10 @@
 // Objects //
 
 const BtnFill = Object.freeze({
-  active: 'hsl(193, 54%, 78%)', // blue
-  activeHover: 'hsl(193, 54%, 92%)', // light blue
-  normal: 'hsl(73, 54%, 78%)', // green-yellow
-  normalHover: 'hsl(73, 54%, 92%)' // light green-yellow
+  active: 'hsl(213, 70%, 78%)', // blue
+  activeHover: 'hsl(213, 70%, 92%)', // light blue
+  normal: 'hsl(60, 70%, 78%)', // green-yellow
+  normalHover: 'hsl(60, 70%, 92%)' // light green-yellow
 });
 
 const Calculator = Object.seal({
@@ -14,6 +14,10 @@ const Calculator = Object.seal({
   pendingOp: '',
   phrase: '0',
   state: 'idle',
+  assignActive(btn) {
+    this.pendingOp = btn;
+    Buttons[btn].fill.style.fill = BtnFill.active;
+  },
   changeStateTo(newState) {
     this.state = newState;
   },
@@ -39,10 +43,6 @@ const Calculator = Object.seal({
   },
   removeActive() {
     Buttons[this.pendingOp].fill.style.fill = BtnFill.normal;
-  },
-  assignActive(btn) {
-    this.pendingOp = btn;
-    Buttons[btn].fill.style.fill = BtnFill.active;
   },
   setOpButton(btn) {
     if (this.pendingOp === '') {
@@ -232,33 +232,11 @@ function generateButtons() {
 
 // Helper Functions //
 
-function pathDown(svgPath) {
-  svgPath.style.transform = 'translate(-8px, 8px)';
-}
-
-function textDown(svgText) {
-  let x = Number(svgText.getAttribute('x')) - 8;
-  let y = Number(svgText.getAttribute('y')) + 8;
-  svgText.setAttribute('x', x);
-  svgText.setAttribute('y', y);
-}
-
 function buttonDownAnim(btn) {
   pathDown(Buttons[btn].fill);
   pathDown(Buttons[btn].highlight);
   textDown(Buttons[btn].text);
   Buttons[btn].fill.style.fill = 'white';
-}
-
-function pathUp(svgPath) {
-  svgPath.style.transform = 'translate(0, 0)';
-}
-
-function textUp(svgText) {
-  let x = Number(svgText.getAttribute('x')) + 8;
-  let y = Number(svgText.getAttribute('y')) - 8;
-  svgText.setAttribute('x', x);
-  svgText.setAttribute('y', y);
 }
 
 function buttonUpAnim(btn) {
@@ -272,6 +250,28 @@ function buttonUpAnim(btn) {
 
 function getButton(target) {
   return target.closest('g').id;
+}
+
+function pathDown(svgPath) {
+  svgPath.style.transform = 'translate(-8px, 8px)';
+}
+
+function pathUp(svgPath) {
+  svgPath.style.transform = 'translate(0, 0)';
+}
+
+function textDown(svgText) {
+  let x = Number(svgText.getAttribute('x')) - 8;
+  let y = Number(svgText.getAttribute('y')) + 8;
+  svgText.setAttribute('x', x);
+  svgText.setAttribute('y', y);
+}
+
+function textUp(svgText) {
+  let x = Number(svgText.getAttribute('x')) + 8;
+  let y = Number(svgText.getAttribute('y')) - 8;
+  svgText.setAttribute('x', x);
+  svgText.setAttribute('y', y);
 }
 
 // Listener Functions //
@@ -319,10 +319,10 @@ function onMouseOver(e) {
 // Listeners //
 
 const calcButtons = document.getElementById('calc-buttons');
-calcButtons.addEventListener('mouseover', e => onMouseOver(e), false);
-calcButtons.addEventListener('mouseout', e => onMouseOut(e), false);
-calcButtons.addEventListener('mousedown', e => onButtonPress(e), false);
 document.addEventListener('keypress', e => onKeyPress(e), false);
+calcButtons.addEventListener('mousedown', e => onButtonPress(e), false);
+calcButtons.addEventListener('mouseout', e => onMouseOut(e), false);
+calcButtons.addEventListener('mouseover', e => onMouseOver(e), false);
 
 // Initialize //
 
