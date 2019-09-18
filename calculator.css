@@ -1,51 +1,85 @@
 * {
   box-sizing: border-box;
-}
-
-html,
-body {
-  height: 100%;
   margin: 0;
   padding: 0;
-  width: 100%;
 }
 
 body {
-  background: linear-gradient(hsl(60, 96%, 82%), hsl(123, 44%, 75%));
+  background: linear-gradient(
+      hsl(28, 100%, 66%),
+      hsl(304, 68%, 45%),
+      hsl(258, 67%, 31%)
+    )
+    fixed;
   color: #444066;
-  font-family: 'Dosis-ExtraBold', 'Dosis';
-  font-weight: 800;
+  display: grid;
+  font-family: 'Dosis-ExtraBold', 'Dosis', sans-serif;
+  height: 100%;
+  min-height: 100vh;
+  place-items: center;
+  width: 100vw;
+}
+
+a {
+  color: hotpink;
+  text-decoration: none;
 }
 
 .container {
   display: grid;
-  grid-template:
-    auto auto 3fr /
-    1fr auto 1fr;
-  height: 100vh;
-  width: 100vw;
-}
-
-.heading {
-  background: hsl(209, 53%, 62%);
-  border-bottom: 3px solid hsl(210, 53%, 66%);
-  border-top: 3px solid hsl(220, 70%, 80%);
-  box-shadow: 0 0.15em hsl(246, 23%, 33%);
-  color: hsl(60, 96%, 82%);
-  font-size: 8vmin;
-  grid-column: span 3;
-  grid-row: 1;
-  margin-bottom: 8vmin;
-  padding: 0.3em;
-  text-align: center;
-  text-shadow: -2px 2px hsl(246, 23%, 33%);
+  grid-template-columns: 1fr;
+  grid-gap: 2em;
+  height: 100%;
+  justify-items: center;
+  max-width: 100%;
+  padding: 2em 5vw;
+  position: static;
+  width: 100%;
 }
 
 .calculator {
-  grid-column: 2;
+  filter: drop-shadow(-20px 30px 30px rgba(4, 1, 1, 0.3));
+  grid-column: 1;
+  grid-row: 1;
+  margin: 5vmin 0;
+  min-width: 250px;
+  position: static;
+  top: auto;
+  user-select: none;
+  width: 60vw;
+  z-index: 2;
+}
+
+.description {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(30, 30, 30, 0.3);
+  font-size: 1em;
+  display: grid;
+  grid-column: 1;
+  grid-gap: 1.5em;
   grid-row: 2;
-  max-height: 65vh;
-  width: 80vmin;
+  padding: 2em;
+}
+
+.description p {
+  font-family: Geneva, Verdana, sans-serif;
+}
+
+.description h1 {
+  font-size: 3rem;
+  line-height: 3.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.description h2 {
+  font-family: Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.description h2:before {
+  content: 'by ';
 }
 
 .btn-top {
@@ -78,4 +112,32 @@ body {
   fill: #3e5757;
   font-size: 150px;
   white-space: pre;
+}
+
+@media screen and (min-width: 799px) {
+  .container {
+    grid-gap: 2em;
+    grid-template-columns: auto 2em auto;
+    padding: 2em 5vw;
+    position: relative;
+  }
+
+  .calculator {
+    grid-column: 1/3;
+    grid-row: 1;
+    margin: 2em 0 0 -1em;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 4em;
+    width: 35vw;
+  }
+
+  .description {
+    font-size: 1.2em;
+    font-size: calc(0.8em + 0.4vw);
+    grid-column: 2/4;
+    grid-gap: 1em;
+    grid-row: 1;
+    padding: 3em;
+  }
 }

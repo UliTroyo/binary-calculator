@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" role="application" data-name="Layer 1" viewBox="0 0 611.7 712" class="calculator">
+  <defs>
+    <style>
+      .cls-6{fill:#444066}.cls-12{isolation:isolate;font-family:Dosis-ExtraBold,Dosis;font-weight:700}.cls-10{fill:#fff}.cls-11{fill:#d8e5a8}.cls-12{font-size:57.59px;fill:#3d395b}
+    </style>
+    <linearGradient id="linear-gradient" x2="1" y1="792.33" y2="792.33" gradientTransform="scale(601.58 -601.58) rotate(-77.816 -490.741 395.832)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#4681b9"/>
+      <stop offset=".48" stop-color="#416ea4"/>
+      <stop offset="1" stop-color="#333968"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x2="1" y1="792.01" y2="792.01" gradientTransform="matrix(0 652.05 652.05 0 -516107.92 43.81)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#add2f6"/>
+      <stop offset="1" stop-color="#8cb4db"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-3" x2="1" y1="792.15" y2="792.15" gradientTransform="matrix(0 655.89 655.89 0 -519238.9 39.98)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#88b8e7"/>
+      <stop offset=".48" stop-color="#7ea7d9"/>
+      <stop offset="1" stop-color="#6079b1"/>
+    </linearGradient>
+    <clipPath id="clip-path" transform="translate(0 -40)">
+      <path d="M433 109.5a12.2 12.2 0 0 0-11.4-9.4H109.9c-5.2 0-8.5 4.2-7.4 9.4l27.9 131.4a12.2 12.2 0 0 0 11.4 9.4h311.7c5.2 0 8.5-4.2 7.4-9.4z" style="fill:none"/>
+    </clipPath>
+  </defs>
+  <title>Binary Calculator</title>
+  <g id="calc-body">
+    <path id="profile" d="M440.7 40c20.8 0 41.2 16.8 45.6 37.5l124.5 585.9c2.3 10.6-.1 20.1-5.7 26.9l-33 48.8c-5.3 7.9-14.3 12.9-25.6 12.9H170.9c-20.7 0-41.1-16.8-45.5-37.6L.8 128.6c-2.1-10-.1-19.1 4.8-25.8s34.7-51 35.7-52.3h.1C46.7 44 55.1 40 65.2 40z" transform="translate(0 -40)" style="fill:url(#linear-gradient)"/>
+    <path id="face-highlight" d="M486.3 77.5C481.9 56.8 461.5 40 440.7 40H65.2c-20.7 0-34 16.8-29.6 37.5l124.5 585.9c4.5 20.7 24.9 37.5 45.6 37.5h375.5c20.8 0 34-16.8 29.6-37.5z" transform="translate(0 -40)" style="fill:url(#linear-gradient-2)"/>
+    <path id="face" d="M482 77.6c-3.9-18.6-22.3-33.8-41-33.8H65.9c-18.7 0-30.6 15.2-26.7 33.8l124.3 584.5c3.9 18.6 22.3 33.8 41 33.8h375.1c18.7 0 30.6-15.2 26.7-33.8L482 77.6z" transform="translate(0 -40)" style="fill:url(#linear-gradient-3)"/>
+    <path id="screen-highlight" d="M436.7 108.1c-1.3-6.2-7.5-11.3-13.7-11.3H108c-6.2 0-10.2 5.1-8.9 11.3L127.8 243c1.3 6.2 7.4 11.3 13.7 11.3h315c6.2 0 10.2-5.1 8.9-11.3l-28.7-134.9z" transform="translate(0 -40)" style="fill:#79a8d6"/>
+    <path id="screen-shadow" d="M433 109.5a12.2 12.2 0 0 0-11.4-9.4H109.9c-5.2 0-8.5 4.2-7.4 9.4l27.9 131.4a12.2 12.2 0 0 0 11.4 9.4h311.7c5.2 0 8.5-4.2 7.4-9.4z" class="cls-6" transform="translate(0 -40)"/>
+    <g style="clip-path:url(#clip-path)">
+      <path d="M426.4 120.7a12.2 12.2 0 0 0-11.4-9.4H103.3c-5.2 0-8.5 4.2-7.4 9.4l27.9 131.5c1.1 5.1 6.2 9.4 11.4 9.4h311.7c5.2 0 8.5-4.3 7.4-9.4z" transform="translate(0 -40)" style="fill:#bbeabd"/>
+    </g>
+    <text id="screen-text" transform="matrix(.98 0 .21 .98 129.58 163.44)" style="font-size:69.11px;fill:#3e5757;isolation:isolate;font-family:Dosis-ExtraBold,Dosis;font-weight:700">
+      00000000
+    </text>
+  </g>
+  <g id="calc-buttons">
+    <g id="one" class="calc-btn" role="button">
+      <path class="btn-shadow cls-6" d="M237.3 319.8a12.2 12.2 0 0 0-11.4-9.4h-71.3c-5.2 0-8.5 4.2-7.4 9.4l15.2 71.3c1.1 5.2 6.2 9.4 11.3 9.4h71.4c5.2 0 8.5-4.2 7.4-9.4z" transform="translate(0 -40)"/>
+        <path id="highlight cls-10" d="M242 314.1c-1.1-5.2-6.2-9.4-11.3-9.4h-71.4c-5.2 0-8.5 4.2-7.4 9.4l15.2 71.4a12.2 12.2 0 0 0 11.4 9.4h71.3c5.2 0 8.5-4.2 7.4-9.4L242 314.1z" transform="translate(0 -40)"/>
+        <path class="btn-fill btn-top cls-11" d="M239.1 315.9a9.9 9.9 0 0 0-9.1-7.5h-67.6a5.9 5.9 0 0 0-5.9 7.5l14.4 67.8a9.8 9.8 0 0 0 9.1 7.5h67.6c4.1 0 6.8-3.3 5.9-7.5l-14.4-67.8z" transform="translate(0 -40)"/>
+        <text class="cls-12 btn-text btn-top" transform="matrix(.98 0 .21 .98 201.4 329.96)">
+        1
+        </text>
+    </g>
+    <g id="plus" class="calc-btn" role="button">
+      <path class="btn-shadow cls-6" d="M357.5 319.8a12.2 12.2 0 0 0-11.4-9.4h-71.3c-5.2 0-8.5 4.2-7.4 9.4l15.1 71.3a12.2 12.2 0 0 0 11.4 9.4h71.4c5.2 0 8.5-4.2 7.4-9.4l-15.2-71.3z" transform="translate(0 -40)"/>
+        <path class="btn-highlight btn-top cls-10" d="M362.2 314.1a12.2 12.2 0 0 0-11.4-9.4h-71.3c-5.2 0-8.5 4.2-7.4 9.4l15.1 71.4a12.3 12.3 0 0 0 11.4 9.4H370c5.2 0 8.5-4.2 7.4-9.4l-15.2-71.4z" transform="translate(0 -40)"/>
+        <path class="btn-fill btn-top cls-11" d="M359.3 315.9a9.9 9.9 0 0 0-9.1-7.5h-67.6c-4.2 0-6.8 3.4-5.9 7.5l14.4 67.8a9.7 9.7 0 0 0 9.1 7.5h67.6c4.1 0 6.8-3.3 5.9-7.5l-14.4-67.8z" transform="translate(0 -40)"/>
+      </g>
+      <text class="cls-12 btn-text btn-top" transform="matrix(.98 0 .21 .98 315.75 322.8)">
+        +
+      </text>
+    </g>
+    <g id="minus" class="calc-btn" role="button">
+      <path class="btn-shadow cls-6" d="M477.7 319.8a12.2 12.2 0 0 0-11.4-9.4h-71.4c-5.1 0-8.5 4.2-7.4 9.4l15.2 71.3a12.2 12.2 0 0 0 11.4 9.4h71.4c5.1 0 8.4-4.2 7.3-9.4z" transform="translate(0 -40)"/>
+        <path class="btn-highlight btn-top cls-10" d="M482.4 314.1a12.2 12.2 0 0 0-11.4-9.4h-71.4c-5.1 0-8.4 4.2-7.3 9.4l15.1 71.4a12.2 12.2 0 0 0 11.4 9.4h71.4c5.1 0 8.5-4.2 7.4-9.4z" transform="translate(0 -40)"/>
+        <path class="btn-fill btn-top cls-11" d="M479.5 315.9a9.9 9.9 0 0 0-9.2-7.5h-67.6c-4.1 0-6.7 3.4-5.9 7.5l14.4 67.8a9.8 9.8 0 0 0 9.2 7.5H488c4.1 0 6.8-3.3 5.9-7.5z" transform="translate(0 -40)"/>
+        <text class="cls-12 btn-text btn-top" transform="matrix(.98 0 .21 .98 436.59 323.39)">
+        -
+        </text>
+    </g>
+    <g id="zero" class="calc-btn" role="button">
+      <path class="btn-shadow cls-6" d="M262.9 439.9a12.3 12.3 0 0 0-11.4-9.3h-71.4a7.4 7.4 0 0 0-7.4 9.3l15.2 71.4a12.2 12.2 0 0 0 11.4 9.4h71.3c5.2 0 8.5-4.2 7.4-9.4z" transform="translate(0 -40)"/>
+        <path class="btn-highlight btn-top cls-10" d="M267.6 434.3a12.2 12.2 0 0 0-11.4-9.4h-71.4c-5.1 0-8.5 4.2-7.4 9.4l15.2 71.4c1.1 5.1 6.2 9.4 11.4 9.4h71.4c5.1 0 8.4-4.3 7.3-9.4z" transform="translate(0 -40)"/>
+        <path class="btn-fill btn-top cls-11" d="M264.6 436.1a9.6 9.6 0 0 0-9.1-7.5h-67.6c-4.1 0-6.8 3.3-5.9 7.5l14.4 67.8a9.9 9.9 0 0 0 9.1 7.5h67.6c4.2 0 6.8-3.4 6-7.5l-14.5-67.8z" transform="translate(0 -40)"/>
+        <text class="cls-12 btn-text btn-top" transform="matrix(.98 0 .21 .98 219.56 449.67)">
+        0
+        </text>
+    </g>
+    <g id="multiply" class="calc-btn" role="button">
+      <path class="btn-shadow cls-6" d="M383 439.9c-1.1-5.1-6.2-9.3-11.3-9.3h-71.4c-5.2 0-8.5 4.2-7.4 9.3l15.2 71.4a12.2 12.2 0 0 0 11.4 9.4h71.3c5.2 0 8.5-4.2 7.4-9.4L383 439.9z" transform="translate(0 -40)"/>
+        <path class="btn-highlight btn-top cls-10" d="M387.8 434.3a12.2 12.2 0 0 0-11.4-9.4H305c-5.2 0-8.5 4.2-7.4 9.4l15.2 71.4c1.1 5.1 6.2 9.4 11.4 9.4h71.3c5.2 0 8.5-4.3 7.4-9.4l-15.1-71.4z" transform="translate(0 -40)"/>
+        <path class="btn-fill btn-top cls-11" d="M384.8 436.1a9.7 9.7 0 0 0-9.1-7.5h-67.6c-4.1 0-6.8 3.3-5.9 7.5l14.4 67.8a9.9 9.9 0 0 0 9.1 7.5h67.6c4.2 0 6.8-3.4 5.9-7.5l-14.4-67.8z" transform="translate(0 -40)"/>
+        <text class="cls-12 btn-text btn-top" transform="matrix(.98 0 .21 .98 342.7 445.44)">
+        ×
+        </text>
+    </g>
+    <g id="divide" class="calc-btn" role="button">
+      <path class="btn-shadow cls-6" d="M503.2 439.9a12.3 12.3 0 0 0-11.4-9.3h-71.3c-5.2 0-8.5 4.2-7.4 9.3l15.2 71.4c1.1 5.2 6.2 9.4 11.3 9.4H511c5.2 0 8.5-4.2 7.4-9.4z" transform="translate(0 -40)"/>
+        <path class="btn-highlight btn-top cls-10" d="M507.9 434.3a12.2 12.2 0 0 0-11.4-9.4h-71.3c-5.2 0-8.5 4.2-7.4 9.4l15.2 71.4c1.1 5.1 6.2 9.4 11.4 9.4h71.3c5.2 0 8.5-4.3 7.4-9.4z" transform="translate(0 -40)"/>
+        <path class="btn-fill btn-top cls-11" d="M505 436.1a9.8 9.8 0 0 0-9.1-7.5h-67.6c-4.1 0-6.8 3.3-5.9 7.5l14.4 67.8a9.9 9.9 0 0 0 9.1 7.5h67.6a5.9 5.9 0 0 0 5.9-7.5L505 436.1z"  transform="translate(0 -40)"/>
+        <text class="cls-12 btn-text btn-top" transform="matrix(.98 0 .21 .98 461.94 443.57)">
+        ÷
+        </text>
+    </g>
+    <g id="clear" class="calc-btn" role="button">
+      <path class="btn-shadow cls-6" d="M288.5 560.2a12.2 12.2 0 0 0-11.4-9.4h-71.3c-5.2 0-8.5 4.2-7.4 9.4l15.1 71.3a12.2 12.2 0 0 0 11.4 9.4h71.4c5.2 0 8.5-4.2 7.4-9.4l-15.2-71.3z" transform="translate(0 -40)"/>
+        <path class="btn-highlight btn-top cls-10" d="M293.2 554.6a12.2 12.2 0 0 0-11.4-9.4h-71.3c-5.2 0-8.5 4.2-7.4 9.4l15.1 71.3a12.2 12.2 0 0 0 11.4 9.4H301c5.2 0 8.5-4.2 7.4-9.4z" transform="translate(0 -40)"/>
+        <path class="btn-fill btn-top cls-11" d="M290.3 556.3a9.9 9.9 0 0 0-9.1-7.5h-67.6c-4.2 0-6.8 3.4-5.9 7.5l14.4 67.8a9.6 9.6 0 0 0 9.1 7.5h67.6c4.1 0 6.8-3.3 5.9-7.5l-14.4-67.8z" transform="translate(0 -40)"/>
+        <text class="cls-12 btn-text btn-top" transform="matrix(.98 0 .21 .98 247.88 563.74)">
+        c
+        </text>
+    </g>
+    <g id="equals" class="calc-btn" role="button">
+      <path class="btn-shadow cls-6" d="M528.9 560.1a12.2 12.2 0 0 0-11.4-9.4H326c-5.2 0-8.5 4.2-7.4 9.4l15.2 71.4a12.2 12.2 0 0 0 11.4 9.4h191.5c5.2 0 8.5-4.2 7.4-9.4z" transform="translate(0 -40)"/>
+        <path class="btn-highlight btn-top cls-10" d="M533.6 554.5a12.2 12.2 0 0 0-11.4-9.4H330.7c-5.2 0-8.5 4.2-7.4 9.4l15.2 71.3a12.2 12.2 0 0 0 11.4 9.4h191.5c5.2 0 8.5-4.2 7.4-9.4l-15.2-71.3z" transform="translate(0 -40)"/>
+        <path class="btn-fill btn-top cls-11" d="M530.5 556.3a9.8 9.8 0 0 0-9.1-7.6H333.6c-4.1 0-6.8 3.4-5.9 7.6l14.4 67.8a9.9 9.9 0 0 0 9.1 7.5H539c4.2 0 6.8-3.4 5.9-7.5z" transform="translate(0 -40)"/>
+        <text class="cls-12 btn-text btn-top" transform="matrix(.98 0 .21 .98 427.2 563.74)">
+        =
+        </text>
+    </g>
+  </g>
+</svg>

@@ -1,21 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8"/>
-    <title>Binary Calculator</title>
-    <link
-      href="https://fonts.googleapis.com/css?family=Dosis:800"
-      rel="stylesheet">
-    <link rel="stylesheet" href="calculator.css"/>
-    <link
-      rel="icon"
-      href="https://res.cloudinary.com/ulitroyo/image/upload/v1544742514/calculator-icon.png"
-      type="image/png">
-  </head>
-
-  <body>
-    <main class="container">
-      <svg
+<svg
         class="calculator"
         role="application"
         xmlns="http://www.w3.org/2000/svg"
@@ -32,38 +15,44 @@
              28.663-56.781 28.664 H379.246c-45.993 0-91.27-37.34-101.047-83.333l-276.323
              -1300 c-4.7-22.113-.344-42.226 10.559-57.149l-.001-.001S89.448 26.205 91.751
              23.407l.01-.015.001.001C103.677 8.913 122.186 .001 144.657 0H977.99z"
-            style="fill:url(#_body)"/>
+            style="fill:url(#_body)"
+/>
           <path
             id="face-highlight"
             d="M1079.04 83.333C1069.264 37.34 1023.986 0 977.993 0H144.66C98.667 0 69.264
              37.34 79.04 83.333l276.323 1300c9.776 45.993 55.054 83.334 101.047 83.334
              h833.333c45.993 0 75.396-37.341 65.62-83.334l-276.323 -1300z"
-            style="fill:url(#_highlight)"/>
+            style="fill:url(#_highlight)"
+/>
           <path
             id="face"
             d="M1069.61 83.504c-8.799-41.393-49.548-75-90.942-75H146.139c -41.394 0-67.857
              33.607-59.059 75l275.661 1296.88c8.798 41.394 49.548 75 90.941 75
              h832.53c41.393 0 67.857-33.606 59.058-75L 1069.61 83.504z"
-            style="fill:url(#_face)"/>
+            style="fill:url(#_face)"
+/>
           <path
             id="screen-highlight"
             d="M968.978 151.111c-2.933-13.798-16.516-25-30.314 -25H239.606c-13.798 0-22.619
              11.202-19.686 25l 63.648 299.445c2.933 13.797 16.516 25 30.314 25 h699.058
              c13.798 0 22.619-11.203 19.686-25l-63.648 -299.445z"
-            style="fill:#79a8d6"/>
+            style="fill:#79a8d6"
+/>
           <path
             id="screen-shadow"
             d="M960.76 154.167c-2.444-11.499-13.764-20.834-25.262 -20.834H243.831c-11.498 0
              -18.849 9.335-16.405 20.834 l61.996 291.666c2.444 11.499 13.763 20.834 25.262
              20.834h691.666c11.498 0 18.849-9.335 16.405-20.834L 960.76 154.167z"
-            style="fill:#444066"/>
+            style="fill:#444066"
+/>
           <clipPath id="_clip4">
             <path
               id="screen"
               d="M960.76 154.167c-2.444-11.499-13.764-20.834-25.262-20.834 H243.831c-11.498
                0-18.849 9.335-16.405 20.834l61.996 291.666c2.444 11.499 13.763 20.834
                25.262 20.834h691.666c 11.498 0 18.849-9.335 16.405-20.834L960.76
-               154.167z"/>
+               154.167z"
+/>
           </clipPath>
           <g clip-path="url(#_clip4)">
             <path
@@ -71,14 +60,18 @@
                -11.498 0-18.849 9.335-16.405 20.834l61.995 291.666c2.444 11.499 13.764
                20.834 25.262 20.834h691.667c11.498 0 18.849-9.335 16.405-20.834l-61.996
                -291.666z"
-              style="fill:#bbeabd"/>
+              style="fill:#bbeabd"
+/>
           </g>
           <text
             id="screen-text"
             x="43.352"
             y="362.661"
             textLength="50%"
-            transform="translate(167.096) skewX(12)">00000000</text>
+            transform="translate(167.096) skewX(12)"
+          >
+            00000000
+          </text>
         </g>
 
         <g id="calc-buttons">
@@ -87,19 +80,22 @@
               class="btn-shadow"
               d="M526.619 620.833C524.175 609.335 512.856 600 501.358 600H 343.024c-11.498
                0-18.849 9.335-16.405 20.833l33.655 158.334 C362.718 790.665 374.037 800
-               385.536 800h158.333c11.498 0 18.849-9.335 16.405-20.833l-33.655-158.334z"/>
+               385.536 800h158.333c11.498 0 18.849-9.335 16.405-20.833l-33.655-158.334z"
+/>
             <path
               class="btn-highlight btn-top"
               d="M537.069 608.333c-2.444-11.498-13.764-20.833-25.262-20.833 H353.474c-11.499
                0-18.849 9.335-16.405 20.833l33.654 158.334 c2.444 11.498 13.764 20.833
-               25.262 20.833h158.333c11.499 0 18.849-9.335 16.405-20.833l-33.654-158.334z"/>
+               25.262 20.833h158.333c11.499 0 18.849-9.335 16.405-20.833l-33.654-158.334z"
+/>
             <path
               class="btn-fill btn-top"
               d="M530.561 612.262c-1.955-9.199-11.011-16.667-20.209-16.667h-150c -9.199 0
                -15.08 7.468-13.124 16.667l31.984 150.476c1.956 9.199 11.011 16.667 20.21
-               16.667h150c9.198 0 15.079-7.468 13.124 -16.667l-31.985-150.476z"/>
+               16.667h150c9.198 0 15.079-7.468 13.124 -16.667l-31.985-150.476z"
+/>
             <text
-              class="btn-text btn-top"
+              class=" btn-text btn-top"
               x="202.721"
               y="732.17"
               transform="translate(88.554) skewX(12)"
@@ -112,17 +108,20 @@
               class="btn-shadow"
               d="M793.286 620.833C790.842 609.335 779.523 600 768.024  600H609.691c-11.498 0
                -18.849 9.335-16.405 20.833l33.655 158.334C629.385 790.665 640.704 800 652.202
-               800h158.334c 11.498 0 18.849-9.335 16.405-20.833l-33.655-158.334z"/>
+               800h158.334c 11.498 0 18.849-9.335 16.405-20.833l-33.655-158.334z"
+/>
             <path
               class="btn-highlight btn-top"
               d="M803.735 608.333c-2.444-11.498-13.763-20.833-25.261 -20.833H620.14c-11.498 0
                -18.849 9.335-16.405 20.833l 33.655 158.334c2.444 11.498 13.763 20.833 25.262
-               20.833h 158.333c11.498 0 18.849-9.335 16.405-20.833l-33.655 -158.334z"/>
+               20.833h 158.333c11.498 0 18.849-9.335 16.405-20.833l-33.655 -158.334z"
+/>
             <path
               class="btn-fill btn-top"
               d="M797.228 612.262c-1.956-9.199-11.011-16.667-20.21-16.667h-150c-9.198 0-15.079
                7.468-13.124 16.667l31.985 150.476c1.955 9.199 11.011 16.667 20.209 16.667
-               h150c9.199 0 15.08-7.468 13.124-16.667l-31.984-150.476z"/>
+               h150c9.199 0 15.08-7.468 13.124-16.667l-31.984-150.476z"
+/>
             <text
               class="btn-text btn-top"
               x="456.444"
@@ -137,17 +136,20 @@
               class="btn-shadow"
               d="M1059.95 620.833c-2.444-11.498-13.764-20.833-25.262-20.833H876.355c-11.498 0
                -18.849 9.335-16.405 20.833l33.654 158.334C896.048 790.665 907.368 800 918.866
-               800h158.333c11.499 0 18.849-9.335 16.405-20.833l-33.654-158.334z"/>
+               800h158.333c11.499 0 18.849-9.335 16.405-20.833l-33.654-158.334z"
+/>
             <path
               class="btn-highlight btn-top"
               d="M1070.4 608.333c-2.444-11.498-13.763-20.833-25.262-20.833H886.805c-11.498 0
                -18.849 9.335-16.405 20.833l33.655 158.334c2.444 11.498 13.763 20.833 25.261
-               20.833h158.334c11.498 0 18.849-9.335 16.405-20.833L1070.4 608.333z"/>
+               20.833h158.334c11.498 0 18.849-9.335 16.405-20.833L1070.4 608.333z"
+/>
             <path
               class="btn-fill btn-top"
               d="M1063.89 612.262c-1.955-9.199-11.011-16.667-20.209-16.667h-150c-9.199 0-15.079
                7.468-13.124 16.667l31.985 150.476c1.955 9.199 11.01 16.667 20.209
-               16.667h150c9.199 0 15.079-7.468 13.124-16.667l-31.985-150.476z"/>
+               16.667h150c9.199 0 15.079-7.468 13.124-16.667l-31.985-150.476z"
+/>
             <text
               class="btn-text btn-top"
               x="724.596"
@@ -162,17 +164,20 @@
               class="btn-shadow"
               d="M583.301 887.5c-2.444-11.498-13.763-20.833-25.262-20.833H399.706c-11.498 0
                -18.849 9.335-16.405 20.833l33.655 158.333c2.444 11.499 13.763 20.834 25.261
-               20.834h158.334c11.498 0 18.849-9.335 16.405-20.834L583.301 887.5z"/>
+               20.834h158.334c11.498 0 18.849-9.335 16.405-20.834L583.301 887.5z"
+/>
             <path
               class="btn-highlight btn-top"
               d="M593.75 875c-2.444-11.498-13.763-20.833-25.261-20.833H410.155c-11.498 0-18.849
                9.335-16.405 20.833l33.655 158.333c2.444 11.499 13.763 20.834 25.262 20.834
-               H611c11.498 0 18.849-9.335 16.405-20.834L593.75 875z"/>
+               H611c11.498 0 18.849-9.335 16.405-20.834L593.75 875z"
+/>
             <path
               class="btn-fill btn-top"
               d="M587.243 878.928c-1.956-9.198-11.011-16.666-20.21-16.666h-150c-9.198 0-15.079
                7.468-13.124 16.666l31.985 150.477c1.955 9.199 11.011 16.667 20.209 16.667
-               h150c9.199 0 15.08-7.468 13.124-16.667l-31.984-150.477z"/>
+               h150c9.199 0 15.08-7.468 13.124-16.667l-31.984-150.477z"
+/>
             <text
               class="btn-text btn-top"
               x="243.015"
@@ -187,17 +192,20 @@
               class="btn-shadow"
               d="M849.968 887.5c-2.444-11.498-13.764-20.833-25.262-20.833H666.373c-11.498 0
                -18.849 9.335-16.405 20.833l33.655 158.333c2.444 11.499 13.763 20.834 25.261
-               20.834h158.333c11.499 0 18.85-9.335 16.406-20.834L849.968 887.5z"/>
+               20.834h158.333c11.499 0 18.85-9.335 16.406-20.834L849.968 887.5z"
+/>
             <path
               class="btn-highlight btn-top"
               d="M860.417 875c-2.444-11.498-13.763-20.833-25.262-20.833H676.822c-11.498 0
                -18.849 9.335-16.405 20.833l33.655 158.333c2.444 11.499 13.763 20.834 25.261
-               20.834h158.334c11.498 0 18.849-9.335 16.405-20.834L860.417 875z"/>
+               20.834h158.334c11.498 0 18.849-9.335 16.405-20.834L860.417 875z"
+/>
             <path
               class="btn-fill btn-top"
               d="M853.909 878.928c-1.955-9.198-11.01-16.666-20.209-16.666h-150c-9.199 0-15.079
                7.468-13.124 16.666l31.985 150.477c1.955 9.199 11.01 16.667 20.209 16.667
-               h150c9.199 0 15.079-7.468 13.124-16.667l-31.985-150.477z"/>
+               h150c9.199 0 15.079-7.468 13.124-16.667l-31.985-150.477z"
+/>
             <text
               class="btn-text btn-top"
               x="516.262"
@@ -212,17 +220,20 @@
               class="btn-shadow"
               d="M1116.63 887.5c-2.444-11.498-13.763-20.833-25.261-20.833H933.035c-11.498 0
                -18.849 9.335-16.405 20.833l33.655 158.333c2.444 11.499 13.764 20.834 25.262
-               20.834h158.333c11.498 0 18.849-9.335 16.405-20.834L1116.63 887.5z"/>
+               20.834h158.333c11.498 0 18.849-9.335 16.405-20.834L1116.63 887.5z"
+/>
             <path
               class="btn-highlight btn-top"
               d="M1127.08 875c-2.444-11.498-13.764-20.833-25.262-20.833H943.485c-11.498 0
                -18.849 9.335-16.405 20.833l33.654 158.333c2.444 11.499 13.764 20.834 25.262
-               20.834h158.333c11.499 0 18.849-9.335 16.405-20.834L1127.08 875z"/>
+               20.834h158.333c11.499 0 18.849-9.335 16.405-20.834L1127.08 875z"
+/>
             <path
               class="btn-fill btn-top"
               d="M1120.58 878.928c-1.955-9.198-11.011-16.666-20.209-16.666h-150c-9.199 0-15.08
                7.468-13.124 16.666l31.984 150.477c1.956 9.199 11.011 16.667 20.21 16.667
-               h150c9.198 0 15.079-7.468 13.124-16.667l-31.985-150.477z"/>
+               h150c9.198 0 15.079-7.468 13.124-16.667l-31.985-150.477z"
+/>
             <text
               class="btn-text btn-top"
               x="780.846"
@@ -237,17 +248,20 @@
               class="btn-shadow"
               d="M640.163 1154.17c-2.444-11.499-13.763-20.834-25.261-20.834H456.568c-11.498 0
                -18.849 9.335-16.405 20.834l33.655 158.333c2.444 11.498 13.763 20.833 25.262
-               20.833h158.333c11.498 0 18.849-9.335 16.405-20.833l-33.655-158.333z"/>
+               20.833h158.333c11.498 0 18.849-9.335 16.405-20.833l-33.655-158.333z"
+/>
             <path
               class="btn-highlight btn-top"
               d="M650.58 1141.67c-2.444-11.499-13.763-20.834-25.262-20.834H466.985c-11.498 0
                -18.849 9.335-16.405 20.834l33.655 158.333c2.444 11.498 13.763 20.833 25.261
-               20.833H667.83c11.498 0 18.849-9.335 16.405-20.833L650.58 1141.67z"/>
+               20.833H667.83c11.498 0 18.849-9.335 16.405-20.833L650.58 1141.67z"
+/>
             <path
               class="btn-fill btn-top"
               d="M643.861 1145.6c-1.955-9.199-11.011-16.667-20.209-16.667h-150c-9.199 0-15.08 
                7.468-13.124 16.667l31.984 150.477c1.956 9.198 11.011 16.666 20.21 16.666
-               h150c9.198 0 15.079-7.468 13.124-16.666L643.861 1145.6z"/>
+               h150c9.198 0 15.079-7.468 13.124-16.666L643.861 1145.6z"
+/>
             <text
               class="btn-text btn-top"
               x="305.846"
@@ -262,17 +276,20 @@
               class="btn-shadow"
               d="M1173.66 1154.17c-2.444-11.499-13.764-20.834-25.262-20.834h-425c-11.498 0
                -18.849 9.335-16.405 20.834l33.655 158.333c2.444 11.498 13.763 20.833 25.261 
-               20.833h425c11.499 0 18.85-9.335 16.405-20.833l-33.654-158.333z"/>
+               20.833h425c11.499 0 18.85-9.335 16.405-20.833l-33.654-158.333z"
+/>
             <path
               class="btn-highlight btn-top"
               d="M1184.11 1141.67c-2.444-11.499-13.763-20.834-25.262-20.834h-425c-11.498 0
                -18.849 9.335-16.405 20.834l33.655 158.333c2.444 11.498 13.763 20.833 25.262 
-               20.833h425c11.498 0 18.849-9.335 16.405-20.833l-33.655-158.333z"/>
+               20.833h425c11.498 0 18.849-9.335 16.405-20.833l-33.655-158.333z"
+/>
             <path
               class="btn-fill btn-top"
               d="M1177.24 1145.6c-1.956-9.199-11.011-16.667-20.21-16.667H740.364c-9.199 0-15.08
                7.468-13.124 16.667l31.984 150.477c1.956 9.198 11.011 16.666 20.21 16.666
-               H1196.1c9.199 0 15.08-7.468 13.124-16.666L1177.24 1145.6z"/>
+               H1196.1c9.199 0 15.08-7.468 13.124-16.666L1177.24 1145.6z"
+/>
             <text
               class="btn-text btn-top"
               x="703.762"
@@ -315,42 +332,3 @@
           </linearGradient>
         </defs>
       </svg>
-      <aside class="description">
-        <header class="description__header">
-          <h1>Binary Calculator</h1>
-          <h2>Uli Troyo</h2>
-        </header>
-        <p>To make the most of my background as a digital illustrator, I've been playing around with the idea of using
-          <a href="https://en.wikipedia.org/wiki/Scalable_Vector_Graphics">SVG</a>
-          to make GUIs for web-based JavaScript apps. This binary calculator is a little prototype for what I had in mind: an inline SVG with attached JavaScript event listeners and an internal state machine engine to handle state and logic. The app can handle both mouse and keyboard input. Try it yourself!</p>
-        <p>The prototype is successful in its intended role, and as you can see, it's functional. There are a number of things I learned in its implementation that I would do differently now: I would structure my SVG markup in a way that would make it easier to parse, and I would group elements in a way that makes it easier to manipulate them in sync. For that matter, the calculator illustration I used here is pretty much as-is from
-          <a href="https://affinity.serif.com/en-us/designer/">Affinity Designer</a>, briefly passed through
-          <a href="https://jakearchibald.github.io/svgomg/">SVGOMG</a>
-          to help minify the markup a bit, but ideally, I would've flattened the
-          <code>skew()</code>
-          and
-          <code>translate()</code>
-          transforms manually, truncated the path values more, and used
-          <code>&lt;use&gt;</code>
-          elements on all the buttons.
-        </p>
-        <p>Another thing I've since improved in my designs is to allow the CSS to do more. In this app, I am hard-setting styles and then removing them, and frequently— basically every button press triggers this behavior. I would now create a suite of helper CSS classes that would handle transforms and animations instead of hard-coding individual values. In general, I now let CSS do a lot more of the heavy lifting.</p>
-        <p>The use of state machines for this app was probably the most successful thing I did, logic-wise. I know David Khourshid is now well-known for popularizing them with his
-          <a href="https://xstate.js.org/docs/">X-State</a>
-          library, and indeed I took a lot of inspiration from a tutorial he did on implementing them in JavaScript, but I first heard about state machines from
-          <a href="https://en.wikipedia.org/wiki/Pieter_Hintjens">Pieter Hintjens</a>
-          and have since been obsessed with them. I really think they are the proper way of handling state in web applications, both for the practicality of their use and the elegance of their design.</p>
-        <p>Encapsulating both the state machine and the makeshift JavaScript enums I used with
-          <code>Object.seal()</code>
-          and
-          <code>Object.seal()</code>
-          respectively is... perhaps superfluous in an app this small, but I've been trying to find ways to make more resilient browser logic in raw JS. None of my apps are yet large enough for me to consider them battle-tested, but I have a project called
-          <a href="https://dvorak.app">Dvorak.app</a>
-          which will be (descriptively enough) an app for learning the
-          <a href="https://en.wikipedia.org/wiki/Dvorak_Simplified_Keyboard">Dvorak</a>
-          keyboard layout, which will implement most of the features first tried here on a full-scale application.</p>
-      </aside>
-    </main>
-    <script src="calculator.js"></script>
-  </body>
-</html>
