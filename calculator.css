@@ -25,6 +25,10 @@ a {
   text-decoration: none;
 }
 
+code {
+  background-color: #eee;
+}
+
 .container {
   display: grid;
   grid-template-columns: 1fr;
