@@ -5,12 +5,12 @@
 }
 
 body {
-  background: linear-gradient(
-      hsl(28, 100%, 66%),
-      hsl(304, 68%, 45%),
-      hsl(258, 67%, 31%)
-    )
-    fixed;
+  background-image: linear-gradient(
+    hsl(28, 100%, 66%),
+    hsl(304, 68%, 45%),
+    hsl(258, 67%, 31%)
+  );
+  background-attachment: fixed;
   color: #444066;
   display: grid;
   font-family: 'Dosis-ExtraBold', 'Dosis', sans-serif;
@@ -50,7 +50,7 @@ code {
   position: static;
   top: auto;
   user-select: none;
-  width: 60vw;
+  width: 70vw;
   z-index: 2;
 }
 
